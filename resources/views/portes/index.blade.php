@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
-@section('title', 'Raças')
+@section('title', 'Portes')
 
 @section('content')
 <div class="container-fluid">
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item active">
-        <a href="{{ route('racas.index') }}">
-          Raças
+        <a href="{{ route('portes.index') }}">
+          Portes
         </a>
       </li>
     </ol>
@@ -19,7 +19,7 @@
   <x-btn-group label='MenuPrincipal' class="py-1">
 
     @can('permission-create')
-    <a class="btn btn-primary" href="{{ route('racas.create') }}" role="button"><x-icon icon='file-earmark'/> {{ __('New') }}</a>
+    <a class="btn btn-primary" href="{{ route('portes.create') }}" role="button"><x-icon icon='file-earmark'/> {{ __('New') }}</a>
     @endcan
      
     <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalFilter"><x-icon icon='funnel'/> {{ __('Filters') }}</button>
@@ -35,20 +35,20 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($racas as $raca)
+            @foreach($portes as $porte)
             <tr>
                 <td class="text-nowrap">
-                  {{$raca->nome}}
+                  {{$porte->nome}}
                 </td>
                 <td>
                   <x-btn-group label='Opções'>
 
                     @can('raca-edit')
-                    <a href="{{route('racas.edit', $raca->id)}}" class="btn btn-primary btn-sm" role="button"><x-icon icon='pencil-square'/></a>
+                    <a href="{{route('portes.edit', $porte->id)}}" class="btn btn-primary btn-sm" role="button"><x-icon icon='pencil-square'/></a>
                     @endcan
 
                     @can('raca-show')
-                    <a href="{{route('racas.show', $raca->id)}}" class="btn btn-info btn-sm" role="button"><x-icon icon='eye'/></a>
+                    <a href="{{route('portes.show', $porte->id)}}" class="btn btn-info btn-sm" role="button"><x-icon icon='eye'/></a>
                     @endcan
 
                   </x-btn-group>
@@ -59,7 +59,7 @@
     </table>
   </div>
   
-  <x-pagination :query="$racas" />
+  <x-pagination :query="$portes" />
 
 </div>
 
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var perpage = document.getElementById('perpage');
     perpage.addEventListener('change', function() {
         perpage = this.options[this.selectedIndex].value;
-        window.open("{{ route('racas.index') }}" + "?perpage=" + perpage,"_self");
+        window.open("{{ route('portes.index') }}" + "?perpage=" + perpage,"_self");
     });
 });
 </script>

@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
-@section('title', 'Raças')
+@section('title', 'Tipos de Pelagem')
 
 @section('content')
 <div class="container-fluid">
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
-        <a href="{{ route('racas.index') }}">
-          Raças
+        <a href="{{ route('pelos.index') }}">
+          Tipos de Pelagem
         </a>
       </li>
       <li class="breadcrumb-item active" aria-current="page">
@@ -19,7 +19,7 @@
 </div>
 
 <div class="container">
-  <form method="POST" action="{{ route('racas.store') }}">
+  <form method="POST" action="{{ route('pelos.store') }}">
     @csrf
     <div class="row g-3">
       <div class="col-md-6">
@@ -36,5 +36,5 @@
   </form>
 </div>
 
-<x-btn-back route="racas.index" />
+<x-btn-back route="pelos.index" />
 @endsection

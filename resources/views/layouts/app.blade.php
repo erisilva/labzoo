@@ -51,6 +51,48 @@
                                     </a>
                                 </li>
                                 @endcan
+                                @can('raca-index')
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('racas.index') }}">
+                                        <x-icon icon='table' /> Raças
+                                    </a>
+                                </li>
+                                @endcan
+                                @can('porte-index')
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('portes.index') }}">
+                                        <x-icon icon='table' /> Portes
+                                    </a>
+                                </li>
+                                @endcan
+                                @can('cor-index')
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('cors.index') }}">
+                                        <x-icon icon='table' /> Cores
+                                    </a>
+                                </li>
+                                @endcan
+                                @can('regional-index')
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('regionals.index') }}">
+                                        <x-icon icon='table' /> Regionais
+                                    </a>
+                                </li>
+                                @endcan
+                                @can('pelo-index')
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('pelos.index') }}">
+                                        <x-icon icon='table' /> Tipos de Pelagem
+                                    </a>
+                                </li>
+                                @endcan
+                                @can('categoria-index')
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('categorias.index') }}">
+                                        <x-icon icon='table' /> Categorias
+                                    </a>
+                                </li>
+                                @endcan
                                 @can('log-index')
                                 <li>
                                     <a class="dropdown-item" href="{{ route('logs.index') }}">

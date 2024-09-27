@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
-@section('title', 'Raças')
+@section('title', 'Cores os Animais')
 
 @section('content')
 <div class="container-fluid">
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item active">
-        <a href="{{ route('racas.index') }}">
-          Raças
+        <a href="{{ route('cors.index') }}">
+          Cores os Animais
         </a>
       </li>
     </ol>
@@ -19,7 +19,7 @@
   <x-btn-group label='MenuPrincipal' class="py-1">
 
     @can('permission-create')
-    <a class="btn btn-primary" href="{{ route('racas.create') }}" role="button"><x-icon icon='file-earmark'/> {{ __('New') }}</a>
+    <a class="btn btn-primary" href="{{ route('cors.create') }}" role="button"><x-icon icon='file-earmark'/> {{ __('New') }}</a>
     @endcan
      
     <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalFilter"><x-icon icon='funnel'/> {{ __('Filters') }}</button>
@@ -35,20 +35,20 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($racas as $raca)
+            @foreach($cors as $cor)
             <tr>
                 <td class="text-nowrap">
-                  {{$raca->nome}}
+                  {{$cor->nome}}
                 </td>
                 <td>
                   <x-btn-group label='Opções'>
 
-                    @can('raca-edit')
-                    <a href="{{route('racas.edit', $raca->id)}}" class="btn btn-primary btn-sm" role="button"><x-icon icon='pencil-square'/></a>
+                    @can('cor-edit')
+                    <a href="{{route('cors.edit', $cor->id)}}" class="btn btn-primary btn-sm" role="button"><x-icon icon='pencil-square'/></a>
                     @endcan
 
-                    @can('raca-show')
-                    <a href="{{route('racas.show', $raca->id)}}" class="btn btn-info btn-sm" role="button"><x-icon icon='eye'/></a>
+                    @can('cor-show')
+                    <a href="{{route('cors.show', $cor->id)}}" class="btn btn-info btn-sm" role="button"><x-icon icon='eye'/></a>
                     @endcan
 
                   </x-btn-group>
@@ -59,7 +59,7 @@
     </table>
   </div>
   
-  <x-pagination :query="$racas" />
+  <x-pagination :query="$cors" />
 
 </div>
 
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var perpage = document.getElementById('perpage');
     perpage.addEventListener('change', function() {
         perpage = this.options[this.selectedIndex].value;
-        window.open("{{ route('racas.index') }}" + "?perpage=" + perpage,"_self");
+        window.open("{{ route('cors.index') }}" + "?perpage=" + perpage,"_self");
     });
 });
 </script>

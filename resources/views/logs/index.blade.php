@@ -73,7 +73,7 @@
                     {{ $log->action }}
                 </td>
                 <td>
-                    {{ $log->id }}
+                    {{ $log->model_id }}
                 </td>
                 <td>
                   <x-btn-group label='Opções'>

@@ -105,5 +105,140 @@ class PermissionSeeder extends Seeder
             'name' => 'log-export',
             'description' => 'Exportação de dados das permissões',
         ]);
+
+        //raças
+        DB::table('permissions')->insert([
+            'name' => 'raca-index',
+            'description' => 'Lista de raças',
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'raca-create',
+            'description' => 'Registrar nova raça',
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'raca-edit',
+            'description' => 'Alterar dados da raça',
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'raca-delete',
+            'description' => 'Excluir raça',
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'raca-show',
+            'description' => 'Mostrar dados da raça',
+        ]);
+
+        //porte
+        DB::table('permissions')->insert([
+            'name' => 'porte-index',
+            'description' => 'Lista de portes dos animais',
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'porte-create',
+            'description' => 'Registrar novo porte',
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'porte-edit',
+            'description' => 'Alterar dados do porte',
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'porte-delete',
+            'description' => 'Excluir porte do animal',
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'porte-show',
+            'description' => 'Mostrar dados do porte',
+        ]);
+
+        //cor
+        DB::table('permissions')->insert([
+            'name' => 'cor-index',
+            'description' => 'Lista de cores dos animais',
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'cor-create',
+            'description' => 'Registrar nova cor',
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'cor-edit',
+            'description' => 'Alterar dados da cor do animal',
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'cor-delete',
+            'description' => 'Excluir cor do animal',
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'cor-show',
+            'description' => 'Mostrar dados de uma cor do animal',
+        ]);
+
+                //regional
+                DB::table('permissions')->insert([
+                    'name' => 'regional-index',
+                    'description' => 'Lista de regionais',
+                ]);
+                DB::table('permissions')->insert([
+                    'name' => 'regional-create',
+                    'description' => 'Registrar nova regional',
+                ]);
+                DB::table('permissions')->insert([
+                    'name' => 'regional-edit',
+                    'description' => 'Alterar dados de uma regional',
+                ]);
+                DB::table('permissions')->insert([
+                    'name' => 'regional-delete',
+                    'description' => 'Excluir regional',
+                ]);
+                DB::table('permissions')->insert([
+                    'name' => 'regional-show',
+                    'description' => 'Mostrar dados de uma regional',
+                ]);
+
+                //pelo
+                DB::table('permissions')->insert([
+                    'name' => 'pelo-index',
+                    'description' => 'Lista de tipos de pelagens',
+                ]);
+                DB::table('permissions')->insert([
+                    'name' => 'pelo-create',
+                    'description' => 'Registrar novo tipo de pelagem',
+                ]);
+                DB::table('permissions')->insert([
+                    'name' => 'pelo-edit',
+                    'description' => 'Alterar dados de um tipo de pelagem',
+                ]);
+                DB::table('permissions')->insert([
+                    'name' => 'pelo-delete',
+                    'description' => 'Excluir um tipo de pelagem',
+                ]);
+                DB::table('permissions')->insert([
+                    'name' => 'pelo-show',
+                    'description' => 'Mostrar dados de um tipo de pelagem',
+                ]);
+
+                //categoria
+                DB::table('permissions')->insert([
+                    'name' => 'categoria-index',
+                    'description' => 'Lista de categorias',
+                ]);
+                DB::table('permissions')->insert([
+                    'name' => 'categoria-create',
+                    'description' => 'Registrar nova categoria',
+                ]);
+                DB::table('permissions')->insert([
+                    'name' => 'categoria-edit',
+                    'description' => 'Alterar dados de uma categoria',
+                ]);
+                DB::table('permissions')->insert([
+                    'name' => 'categoria-delete',
+                    'description' => 'Excluir categoria',
+                ]);
+                DB::table('permissions')->insert([
+                    'name' => 'categoria-show',
+                    'description' => 'Mostrar dados de uma categoria',
+                ]);
+
+                
+
     }
 }

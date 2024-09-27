@@ -70,6 +70,45 @@ class AclSeeder extends Seeder
                 $log_index = Permission::where('name', '=', 'log-index')->get()->first();
                 $log_show = Permission::where('name', '=', 'log-show')->get()->first();
                 $log_export = Permission::where('name', '=', 'log-export')->get()->first();
+                // para raças
+                $raca_index = Permission::where('name', '=', 'raca-index')->get()->first();
+                $raca_create = Permission::where('name', '=', 'raca-create')->get()->first();
+                $raca_edit = Permission::where('name', '=', 'raca-edit')->get()->first();
+                $raca_delete = Permission::where('name', '=', 'raca-delete')->get()->first();
+                $raca_show = Permission::where('name', '=', 'raca-show')->get()->first();
+                // para portes
+                $porte_index = Permission::where('name', '=', 'porte-index')->get()->first();
+                $porte_create = Permission::where('name', '=', 'porte-create')->get()->first();
+                $porte_edit = Permission::where('name', '=', 'porte-edit')->get()->first();
+                $porte_delete = Permission::where('name', '=', 'porte-delete')->get()->first();
+                $porte_show = Permission::where('name', '=', 'porte-show')->get()->first();
+                // para cores
+                $cor_index = Permission::where('name', '=', 'cor-index')->get()->first();
+                $cor_create = Permission::where('name', '=', 'cor-create')->get()->first();
+                $cor_edit = Permission::where('name', '=', 'cor-edit')->get()->first();
+                $cor_delete = Permission::where('name', '=', 'cor-delete')->get()->first();
+                $cor_show = Permission::where('name', '=', 'cor-show')->get()->first();
+                // para regionais
+                $regional_index = Permission::where('name', '=', 'regional-index')->get()->first();
+                $regional_create = Permission::where('name', '=', 'regional-create')->get()->first();
+                $regional_edit = Permission::where('name', '=', 'regional-edit')->get()->first();
+                $regional_delete = Permission::where('name', '=', 'regional-delete')->get()->first();
+                $regional_show = Permission::where('name', '=', 'regional-show')->get()->first();
+                // para pelos
+                $pelo_index = Permission::where('name', '=', 'pelo-index')->get()->first();
+                $pelo_create = Permission::where('name', '=', 'pelo-create')->get()->first();
+                $pelo_edit = Permission::where('name', '=', 'pelo-edit')->get()->first();
+                $pelo_delete = Permission::where('name', '=', 'pelo-delete')->get()->first();
+                $pelo_show = Permission::where('name', '=', 'pelo-show')->get()->first();
+                // para categoria
+                $categoria_index = Permission::where('name', '=', 'categoria-index')->get()->first();
+                $categoria_create = Permission::where('name', '=', 'categoria-create')->get()->first();
+                $categoria_edit = Permission::where('name', '=', 'categoria-edit')->get()->first();
+                $categoria_delete = Permission::where('name', '=', 'categoria-delete')->get()->first();
+                $categoria_show = Permission::where('name', '=', 'categoria-show')->get()->first();
+
+
+
         
         
                 // salva os relacionamentos entre perfil e suas permissões
@@ -97,6 +136,38 @@ class AclSeeder extends Seeder
                 $administrador_perfil->permissions()->attach($log_index);
                 $administrador_perfil->permissions()->attach($log_show);
                 $administrador_perfil->permissions()->attach($log_export);
+                $administrador_perfil->permissions()->attach($raca_index);
+                $administrador_perfil->permissions()->attach($raca_create);
+                $administrador_perfil->permissions()->attach($raca_edit);
+                $administrador_perfil->permissions()->attach($raca_delete);
+                $administrador_perfil->permissions()->attach($raca_show);
+                $administrador_perfil->permissions()->attach($porte_index);
+                $administrador_perfil->permissions()->attach($porte_create);
+                $administrador_perfil->permissions()->attach($porte_edit);
+                $administrador_perfil->permissions()->attach($porte_delete);
+                $administrador_perfil->permissions()->attach($porte_show);
+                $administrador_perfil->permissions()->attach($cor_index);
+                $administrador_perfil->permissions()->attach($cor_create);
+                $administrador_perfil->permissions()->attach($cor_edit);
+                $administrador_perfil->permissions()->attach($cor_delete);
+                $administrador_perfil->permissions()->attach($cor_show);
+                $administrador_perfil->permissions()->attach($regional_index);
+                $administrador_perfil->permissions()->attach($regional_create);
+                $administrador_perfil->permissions()->attach($regional_edit);
+                $administrador_perfil->permissions()->attach($regional_delete);
+                $administrador_perfil->permissions()->attach($regional_show);
+                $administrador_perfil->permissions()->attach($pelo_index);
+                $administrador_perfil->permissions()->attach($pelo_create);
+                $administrador_perfil->permissions()->attach($pelo_edit);
+                $administrador_perfil->permissions()->attach($pelo_delete);
+                $administrador_perfil->permissions()->attach($pelo_show);
+                $administrador_perfil->permissions()->attach($categoria_index);
+                $administrador_perfil->permissions()->attach($categoria_create);
+                $administrador_perfil->permissions()->attach($categoria_edit);
+                $administrador_perfil->permissions()->attach($categoria_delete);
+                $administrador_perfil->permissions()->attach($categoria_show);                
+
+
 
         
         
@@ -109,6 +180,33 @@ class AclSeeder extends Seeder
                 $gerente_perfil->permissions()->attach($log_show);
                 $gerente_perfil->permissions()->attach($log_show);
                 $gerente_perfil->permissions()->attach($log_export);
+                $gerente_perfil->permissions()->attach($raca_index);
+                $gerente_perfil->permissions()->attach($raca_create);
+                $gerente_perfil->permissions()->attach($raca_edit);                
+                $gerente_perfil->permissions()->attach($raca_show);
+                $gerente_perfil->permissions()->attach($porte_index);
+                $gerente_perfil->permissions()->attach($porte_create);
+                $gerente_perfil->permissions()->attach($porte_edit);
+                $gerente_perfil->permissions()->attach($porte_show);
+                $gerente_perfil->permissions()->attach($cor_index);
+                $gerente_perfil->permissions()->attach($cor_create);
+                $gerente_perfil->permissions()->attach($cor_edit);
+                $gerente_perfil->permissions()->attach($cor_show);
+                $gerente_perfil->permissions()->attach($regional_index);
+                $gerente_perfil->permissions()->attach($regional_create);
+                $gerente_perfil->permissions()->attach($regional_edit);
+                $gerente_perfil->permissions()->attach($regional_show);
+                $gerente_perfil->permissions()->attach($pelo_index);
+                $gerente_perfil->permissions()->attach($pelo_create);
+                $gerente_perfil->permissions()->attach($pelo_edit);
+                $gerente_perfil->permissions()->attach($pelo_show);
+                $gerente_perfil->permissions()->attach($categoria_index);
+                $gerente_perfil->permissions()->attach($categoria_create);
+                $gerente_perfil->permissions()->attach($categoria_edit);
+                $gerente_perfil->permissions()->attach($categoria_show);
+
+
+
 
         
         
@@ -117,12 +215,37 @@ class AclSeeder extends Seeder
                 $operador_perfil->permissions()->attach($user_index);
                 $operador_perfil->permissions()->attach($user_show);
                 $operador_perfil->permissions()->attach($user_export);
+                $operador_perfil->permissions()->attach($raca_index);               
+                $operador_perfil->permissions()->attach($raca_show);
+                $operador_perfil->permissions()->attach($porte_index);
+                $operador_perfil->permissions()->attach($porte_show);
+                $operador_perfil->permissions()->attach($cor_index);
+                $operador_perfil->permissions()->attach($cor_show);
+                $operador_perfil->permissions()->attach($regional_index);
+                $operador_perfil->permissions()->attach($regional_show);
+                $operador_perfil->permissions()->attach($pelo_index);
+                $operador_perfil->permissions()->attach($pelo_show);
+                $operador_perfil->permissions()->attach($categoria_index);
+                $operador_perfil->permissions()->attach($categoria_show);
+
         
         
                 // leitura é um tipo de operador que só pode ler
                 // os dados na tela
                 $leitor_perfil->permissions()->attach($user_index);
                 $leitor_perfil->permissions()->attach($user_show);
+                $leitor_perfil->permissions()->attach($raca_index);               
+                $leitor_perfil->permissions()->attach($raca_show);
+                $leitor_perfil->permissions()->attach($porte_index);
+                $leitor_perfil->permissions()->attach($porte_show);
+                $leitor_perfil->permissions()->attach($cor_index);
+                $leitor_perfil->permissions()->attach($cor_show);
+                $leitor_perfil->permissions()->attach($regional_index);
+                $leitor_perfil->permissions()->attach($regional_show);
+                $leitor_perfil->permissions()->attach($pelo_index);
+                $leitor_perfil->permissions()->attach($pelo_show);
+                $leitor_perfil->permissions()->attach($categoria_index);
+                $leitor_perfil->permissions()->attach($categoria_show);
         
         
     }
