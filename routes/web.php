@@ -16,6 +16,9 @@ use App\Http\Controllers\CorController;
 use App\Http\Controllers\RegionalController;
 use App\Http\Controllers\PeloController;
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\MetodoController;
+use App\Http\Controllers\ResultadoController;
+use App\Http\Controllers\TutorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -106,3 +109,21 @@ Route::resource('/pelos', PeloController::class)->middleware('auth'); // Resourc
 # Categoria
 
 Route::resource('/categorias', CategoriaController::class)->middleware('auth'); // Resource Route, crud
+
+# Método
+
+Route::resource('/metodos', MetodoController::class)->middleware('auth'); // Resource Route, crud
+
+# Resultados
+
+Route::resource('/resultados', ResultadoController::class)->middleware('auth'); // Resource Route, crud
+
+# Tutor
+
+# Route::get('/tutors/export/csv', [TutorController::class, 'exportcsv'])->name('tutors.export.csv')->middleware('auth'); // Export CSV
+
+# Route::get('/tutors/export/xls', [TutorController::class, 'exportxls'])->name('tutors.export.xls')->middleware('auth'); // Export XLS
+
+# Route::get('/tutors/export/pdf', [TutorController::class, 'exportpdf'])->name('tutors.export.pdf')->middleware('auth'); // Export PDF
+
+Route::resource('/tutors', TutorController::class)->middleware('auth'); // Resource Route, crud

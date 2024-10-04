@@ -216,10 +216,9 @@ return [
         'photo' => 'foto',
         'price' => 'preço',
         'size' => 'tamanho',
-        'title' => 'título',
         'content' => 'conteúdo',
-        'body' => 'conteúdo',
-        'excerpt' => 'resumo',
+        'metodo' => 'método',
+        'descricao' => 'descrição',
     ],
 
 ];

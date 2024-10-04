@@ -106,6 +106,26 @@ class AclSeeder extends Seeder
                 $categoria_edit = Permission::where('name', '=', 'categoria-edit')->get()->first();
                 $categoria_delete = Permission::where('name', '=', 'categoria-delete')->get()->first();
                 $categoria_show = Permission::where('name', '=', 'categoria-show')->get()->first();
+                // para métodos
+                $metodo_index = Permission::where('name', '=', 'metodo-index')->get()->first();
+                $metodo_create = Permission::where('name', '=', 'metodo-create')->get()->first();
+                $metodo_edit = Permission::where('name', '=', 'metodo-edit')->get()->first();
+                $metodo_delete = Permission::where('name', '=', 'metodo-delete')->get()->first();
+                $metodo_show = Permission::where('name', '=', 'metodo-show')->get()->first();
+                // para resultados
+                $resultado_index = Permission::where('name', '=', 'resultado-index')->get()->first();
+                $resultado_create = Permission::where('name', '=', 'resultado-create')->get()->first();
+                $resultado_edit = Permission::where('name', '=', 'resultado-edit')->get()->first();
+                $resultado_delete = Permission::where('name', '=', 'resultado-delete')->get()->first();
+                $resultado_show = Permission::where('name', '=', 'resultado-show')->get()->first();
+                // para tutors
+                $tutor_index = Permission::where('name', '=', 'tutor-index')->get()->first();
+                $tutor_create = Permission::where('name', '=', 'tutor-create')->get()->first();
+                $tutor_edit = Permission::where('name', '=', 'tutor-edit')->get()->first();
+                $tutor_delete = Permission::where('name', '=', 'tutor-delete')->get()->first();
+                $tutor_show = Permission::where('name', '=', 'tutor-show')->get()->first();
+                $tutor_export = Permission::where('name', '=', 'tutor-export')->get()->first();
+
 
 
 
@@ -165,7 +185,23 @@ class AclSeeder extends Seeder
                 $administrador_perfil->permissions()->attach($categoria_create);
                 $administrador_perfil->permissions()->attach($categoria_edit);
                 $administrador_perfil->permissions()->attach($categoria_delete);
-                $administrador_perfil->permissions()->attach($categoria_show);                
+                $administrador_perfil->permissions()->attach($categoria_show);
+                $administrador_perfil->permissions()->attach($metodo_index);
+                $administrador_perfil->permissions()->attach($metodo_create);
+                $administrador_perfil->permissions()->attach($metodo_edit);
+                $administrador_perfil->permissions()->attach($metodo_delete);
+                $administrador_perfil->permissions()->attach($metodo_show);
+                $administrador_perfil->permissions()->attach($resultado_index);
+                $administrador_perfil->permissions()->attach($resultado_create);
+                $administrador_perfil->permissions()->attach($resultado_edit);
+                $administrador_perfil->permissions()->attach($resultado_delete);
+                $administrador_perfil->permissions()->attach($resultado_show);
+                $administrador_perfil->permissions()->attach($tutor_index);
+                $administrador_perfil->permissions()->attach($tutor_create);
+                $administrador_perfil->permissions()->attach($tutor_edit);
+                $administrador_perfil->permissions()->attach($tutor_delete);
+                $administrador_perfil->permissions()->attach($tutor_show);
+                $administrador_perfil->permissions()->attach($tutor_export);             
 
 
 
@@ -204,6 +240,19 @@ class AclSeeder extends Seeder
                 $gerente_perfil->permissions()->attach($categoria_create);
                 $gerente_perfil->permissions()->attach($categoria_edit);
                 $gerente_perfil->permissions()->attach($categoria_show);
+                $gerente_perfil->permissions()->attach($metodo_index);
+                $gerente_perfil->permissions()->attach($metodo_create);
+                $gerente_perfil->permissions()->attach($metodo_edit);
+                $gerente_perfil->permissions()->attach($metodo_show);
+                $gerente_perfil->permissions()->attach($resultado_index);
+                $gerente_perfil->permissions()->attach($resultado_create);
+                $gerente_perfil->permissions()->attach($resultado_edit);
+                $gerente_perfil->permissions()->attach($resultado_show);
+                $gerente_perfil->permissions()->attach($tutor_index);
+                $gerente_perfil->permissions()->attach($tutor_create);
+                $gerente_perfil->permissions()->attach($tutor_edit);
+                $gerente_perfil->permissions()->attach($tutor_show);
+                $gerente_perfil->permissions()->attach($tutor_export);
 
 
 
@@ -227,6 +276,17 @@ class AclSeeder extends Seeder
                 $operador_perfil->permissions()->attach($pelo_show);
                 $operador_perfil->permissions()->attach($categoria_index);
                 $operador_perfil->permissions()->attach($categoria_show);
+                $operador_perfil->permissions()->attach($metodo_index);
+                $operador_perfil->permissions()->attach($metodo_show);
+                $operador_perfil->permissions()->attach($resultado_index);
+                $operador_perfil->permissions()->attach($resultado_create);
+                $operador_perfil->permissions()->attach($resultado_show);
+                $operador_perfil->permissions()->attach($tutor_index);
+                $operador_perfil->permissions()->attach($tutor_create);
+                $operador_perfil->permissions()->attach($tutor_edit);
+                $operador_perfil->permissions()->attach($tutor_show);
+                $operador_perfil->permissions()->attach($tutor_export);
+
 
         
         
@@ -246,6 +306,12 @@ class AclSeeder extends Seeder
                 $leitor_perfil->permissions()->attach($pelo_show);
                 $leitor_perfil->permissions()->attach($categoria_index);
                 $leitor_perfil->permissions()->attach($categoria_show);
+                $leitor_perfil->permissions()->attach($metodo_index);
+                $leitor_perfil->permissions()->attach($metodo_show);
+                $leitor_perfil->permissions()->attach($resultado_index);
+                $leitor_perfil->permissions()->attach($resultado_show);
+                $leitor_perfil->permissions()->attach($tutor_index);
+                $leitor_perfil->permissions()->attach($tutor_show);
         
         
     }

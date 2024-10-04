@@ -16,8 +16,7 @@ return new class extends Migration
 
             # dados pessoais
             $table->string('cpf', 20);
-            $table->string('rg', 20)->nullable();
-            $table->string('orgao_expedidor', 10)->nullable();            
+            $table->string('rg', 20)->nullable();      
             $table->string('nome', 180);
             $table->date('nascimento')->nullable();
             
